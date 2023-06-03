@@ -1,0 +1,23 @@
+{
+	"create react component": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+		"prefix": "crc",
+		"body": [
+			"import { classNames } from 'shared/lib/classNames/classNames';",
+      "import cls from './$TM_FILENAME_BASE$1.module.scss';",
+      "",
+      "interface $TM_FILENAME_BASE$2Props {",
+      "  className?: string;",
+      "};",
+      "",
+      "export const $TM_FILENAME_BASE$3 = ({className}: $TM_FILENAME_BASE$4Props) => {",
+      "",
+      "  return (",
+      "    <div className={classNames(cls.$TM_FILENAME_BASE$5, {}, [className])}>",
+      "    </div>",
+      "  );",
+      "};",
+		],
+    "description": "Create react component"
+	}
+}
