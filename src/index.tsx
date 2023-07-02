@@ -5,6 +5,14 @@ import ThemeProvider from './app/providers/ThemeProvider/ui/ThemeProvider';
 import 'shared/config/i18n/i18n';
 import { ErrorBoundary } from 'app/providers/ErrorBoundary';
 
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+
+module.exports = {
+  plugins: [
+    new BundleAnalyzerPlugin()
+  ]
+}
+
 render(
   <BrowserRouter>
     <ErrorBoundary>

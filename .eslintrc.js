@@ -1,44 +1,46 @@
 module.exports = {
-  "env": {
-    "browser": true,
-    "es2021": true,
-    "jest": true
+  env: {
+    browser: true,
+    es2021: true,
+    jest: true,
   },
-  "extends": [
+  extends: [
     // "standard-with-typescript",
-    "plugin:react/recommended",
-    "airbnb",
-    "plugin:i18next/recommended"
+    'plugin:react/recommended',
+    'airbnb',
+    'plugin:i18next/recommended',
   ],
-  "parserOptions": {
-    "ecmaVersion": "latest",
-    "sourceType": "module"
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: module,
   },
-  "plugins": [
-    "react",
-    "@typescript-eslint",
-    "i18next"
+  plugins: [
+    'react',
+    '@typescript-eslint',
+    'i18next',
   ],
-  "rules": {
-    "react/jsx-indent": [2, 2],
-    "react/jsx-indent-props": [2, 2],
+  rules: {
+    'react/jsx-indent': [2, 2],
+    'react/jsx-indent-props': [2, 2],
     indent: [2, 2],
-    "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx", ".tsx"] }],
-    "import/no-unresolved": "off",
-    "import/prefer-default-export": "off",
-    "no-unused-vars": "warn",
-    "react/require-default-props": "off",
-    "react/react-in-jsx-scope": "off",
-    "react/jsx-props-no-spreading": "warn",
-    "react/function-component-definition": "off",
-    "no-shadow": "off",
-    "import/extensions": "off",
-    "import/no-extraneous-dependencies": "warn",
-    "no-underscore-dangle": "off",
-    "i18next/no-literal-string": ['error', {markupOnly: true}],
-    "max-len": ['error', { "ignoreComments": true }],
+    'react/jsx-filename-extension':
+      [2, { extensions: ['.js', '.jsx', '.tsx'] }],
+    'import/no-unresolved': 'off',
+    'import/prefer-default-export': 'off',
+    'no-unused-vars': 'warn',
+    'react/require-default-props': 'off',
+    'react/react-in-jsx-scope': 'off',
+    'react/jsx-props-no-spreading': 'warn',
+    'react/function-component-definition': 'off',
+    'no-shadow': 'off',
+    'import/extensions': 'off',
+    'import/no-extraneous-dependencies': 'warn',
+    'no-underscore-dangle': 'off',
+    'i18next/no-literal-string': ['error', { markupOnly: true }],
+    'max-len': ['error', { ignoreComments: true, code: 100 }],
+    'eol-last': ['error', 'never'],
   },
   globals: {
-    '__IS_DEV__': true
+    __IS_DEV__: true,
   },
-}
+};
