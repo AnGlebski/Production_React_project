@@ -18,6 +18,7 @@ export function buildWebpackConfig(options: BuildOptions): webpack.Configuration
 			path: paths.build,
 			clean: true
 		}, 
+    target: 'node',
 		plugins: buildPlugins(options),
 		module: {
 			rules: buildLoaders(options)
@@ -27,7 +28,8 @@ export function buildWebpackConfig(options: BuildOptions): webpack.Configuration
 		devServer: isDev ? buildDevServer(options) : undefined,
 		watchOptions: {
 			poll: true
-		  }
+		  },
+      externals: [/node_modules/, 'bufferutil', 'utf-8-validate'],
 		
   }
 }
